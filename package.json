@@ -20,9 +20,9 @@
   },
   "homepage": "https://github.com/jbiernat/sdk-mg#readme",
   "dependencies": {
+    "aws-sdk": "2.94.0",
     "chalk": "2.0.1",
     "figlet": "1.2.0",
-    "lodash": "4.17.4",
     "minimist": "1.2.0"
   },
   "devDependencies": {
