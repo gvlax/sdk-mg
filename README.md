@@ -30,3 +30,13 @@ or
 ```
 node index.js --deleteFiles test.txt
 ```
+A file upload to a bucket:
+
+```
+node index.js -u /Users/maciej.gulak/projects/sdk-mg/README.md
+```
+or 
+
+```
+node index.js --uploadFile /Users/maciej.gulak/projects/sdk-mg/README.md
+```
