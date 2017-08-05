@@ -1,0 +1,31 @@
+{
+  "name": "sdk-mg",
+  "version": "1.0.0",
+  "description": "Code test application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbiernat/sdk-mg.git"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "Maciej Gulak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbiernat/sdk-mg/issues"
+  },
+  "homepage": "https://github.com/jbiernat/sdk-mg#readme",
+  "dependencies": {
+    "chalk": "2.0.1",
+    "figlet": "1.2.0",
+    "minimist": "1.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0"
+  }
+}
