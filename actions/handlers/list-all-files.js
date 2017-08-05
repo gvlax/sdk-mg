@@ -24,6 +24,7 @@ module.exports = actionFactory({
 			});
 		});
 	},
+
 	extractFileNames: function (data = {Contents: []}) {
 		return data.Contents.map(obj => obj.Key);
 	}

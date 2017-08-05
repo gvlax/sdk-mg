@@ -7,11 +7,11 @@ module.exports = actionFactory({
 	options: ['d', 'deleteFiles'],
 
 	async handle() {
-		const result = await this.deleteObject();
+		const result = await this.deleteObjects();
 		console.log('Object deleted: ', result);
 	},
 
-	deleteObject: function deleteFile() {
+	deleteObjects: function deleteObjects() {
 		const params = {
 			Bucket: config.aws.bucket,
 			Key: this.data
