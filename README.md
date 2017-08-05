@@ -1,5 +1,5 @@
 
-List files in a bucket:
+List files in a bucket (no regex implemented):
 
 ``` shell
 node index.js -l lcloud-427-mm
@@ -20,7 +20,7 @@ or
 ``` shell
 node index.js --listBuckets
 ```
-Delete a file from a bucket:
+Delete a file from a bucket (no regex implemented; single file only delete):
 
 ```
 node index.js -d test.txt
