@@ -7,7 +7,7 @@ node index.js -l lcloud-427-mm
 or
 
 ``` shell
-node index.js --listAllFiles
+node index.js --listAllFiles lcloud-427-mm
 ```
 
 List all available buckets:
@@ -20,4 +20,13 @@ or
 ``` shell
 node index.js --listBuckets
 ```
+Delete a file from a bucket:
 
+```
+node index.js -d test.txt
+```
+or 
+
+```
+node index.js --deleteFiles test.txt
+```
