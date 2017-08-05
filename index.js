@@ -1,25 +1,35 @@
 const chalk = require('chalk');
 const figlet = require('figlet');
 const minimist = require('minimist');
+const path = require('path');
 const fs = require('fs');
+const _ = require('lodash');
 
-const listAllFiles = require('./actions/list-all-files');
-const uploadFile = require('./actions/upload-file');
-const listBuckets = require('./actions/list-buckets');
-const deleteFilesFromBucket = require('./actions/delete-files');
+const ACTION_HANDLERS_PATH = './actions/handlers';
 
 console.log(
 	chalk.yellow(
-		figlet.textSync('sdk-mg', { horizontalLayout: 'full' })
+		figlet.textSync('sdk-mg', {horizontalLayout: 'full'})
 	)
 );
 
 
-const actions = {
-	"list-all-files" : listAllFiles,
-	"upload-file" : uploadFile,
-	"list-buckets" : listBuckets,
-	"delete-files-from-bucket" : deleteFilesFromBucket
+const loadActionHandlers = handlerDir => {
+	const handlerMap = [];
+	fs.readdirSync(path.join(__dirname, handlerDir)).forEach(
+		handlerFile => {
+			const handler = require('.' + path.sep + path.join(handlerDir, handlerFile));
+			handlerMap.push(handler.options(), handler);
+		});
+	return handlerMap;
 };
 
-actions["upload-file"]();
+
+const optionHandlers = loadActionHandlers(ACTION_HANDLERS_PATH);
+
+
+const argv = minimist(process.argv.slice(2));
+console.dir(argv);
+
+const handlersToRun = Object.keys(argv).map( () => {});
+
