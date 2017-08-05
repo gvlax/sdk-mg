@@ -20,7 +20,6 @@ console.log(
 	)
 );
 
-
 const loadActionHandlers = handlerDir => {
 	const loadedHandlers = [];
 	fs.readdirSync(path.join(__dirname, handlerDir)).forEach(
@@ -34,7 +33,6 @@ const loadActionHandlers = handlerDir => {
 const loadedHandlers = loadActionHandlers(config.optionHandlersPath);
 
 const argv = minimist(process.argv.slice(2));
-//console.dir(argv);
 
 const handlersToRun = Object.keys(argv).reduce((handlersToRun, optName) => {
 	const matchingHandler = loadedHandlers.find(handler => handler.options.includes(optName));

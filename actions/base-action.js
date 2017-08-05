@@ -1,6 +1,5 @@
 const AWS = require('aws-sdk');
 const s3 = new AWS.S3();
-const config = require('../config/config');
 
 module.exports = {
 	s3: s3,
