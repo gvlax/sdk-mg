@@ -7,8 +7,7 @@ module.exports = actionFactory({
 	options: ['d', 'deleteFiles'],
 
 	async handle() {
-		const result = await this.deleteObjects();
-		console.log('Object deleted: ', result);
+		console.log('Object deleted: ', await this.deleteObjects());
 	},
 
 	deleteObjects: function deleteObjects() {
